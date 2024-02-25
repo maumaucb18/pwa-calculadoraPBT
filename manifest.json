@@ -1,0 +1,17 @@
+{
+    "name": "Calculadora de Excesso de PBT e Multa",
+    "short_name": "Calculadora",
+    "description": "Uma calculadora para calcular o excesso de PBT e o valor da multa.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#DEC208",
+    "theme_color": "#DEC208",
+    "icons": [
+      {
+        "src": "/icon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ]
+  }
+  

@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Calculadora de Excesso de PBT e Multa</title>
+<link rel="manifest" href="/manifest.json"> <!-- Adiciona o link para o arquivo de manifesto -->
 <style>
     body {
         background-color: #DEC208;
@@ -70,6 +71,17 @@
     </footer>
 
     <script>
+        // Registro do service worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, function(err) {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            });
+        }
+
         document.getElementById("calculator-form").addEventListener("submit", function(event) {
             event.preventDefault();
 
