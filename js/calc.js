@@ -24,8 +24,8 @@ document.getElementById("calculator-form").addEventListener("submit", function(e
 });
 
 function calcularExcessoPBT(pesoAtual, pbt) {
-    var pbtComAdicional = pbt ; // Adiciona 5% ao PBT  desativado para ativar adicione o código -> pbt* 1.05
-    var excesso = pesoAtual - pbtComAdicional;
+    var pbtComAdicional = pbt ; // Adiciona 5% ao PBT desativado para ativar adicione o código -> pbt* 1.05
+    var excesso = pesoAtual - pbt;
     return excesso > 0 ? excesso : 0;
 }
 
