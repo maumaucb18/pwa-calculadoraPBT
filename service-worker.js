@@ -1,4 +1,4 @@
-const CACHE_NAME = 'calculadora-pwa-cache-v1';
+/*const CACHE_NAME = 'calculadora-pwa-cache-v1';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -26,4 +26,18 @@ self.addEventListener('fetch', function(event) {
         return fetch(event.request);
       })
   );
-});
+});*/
+// https://developers.google.com/web/fundamentals/getting-started/primers/service-workers
+// ------------------------------
+// Pre Cache and Update
+// ------------------------------
+importScripts('./workbox-sw.prod.v1.0.1.js');
+
+const workboxSW = new WorkboxSW({ clientsClaim: true });
+/**
+ * precache() is passed a manifest of URLs and versions
+ * each time the service worker starts up.
+ * Use workbox-build to generate the manifest
+ */
+workboxSW.precache([]);
+manifest
